@@ -13,6 +13,7 @@ public class GameBoard {
 	public GameBoard() {
 		gameBoard = new int[3][3];
 		
+		// Clearing board:
 		for (int i = 0; i < 2; i++) {
 			for (int j = 0; j < 2; j++) {
 				gameBoard[i][j] = 0;
