@@ -40,6 +40,11 @@ public class GameBoard {
 			return -1;
 		}
 		
+		// User cannot write to a space that is already occupied:
+		if (gameBoard[x][y] != 0) {
+			return -1;
+		}
+		
 		gameBoard[x][y] = val;
 		
 		return 0;
