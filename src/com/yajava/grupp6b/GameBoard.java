@@ -4,6 +4,10 @@ package com.yajava.grupp6b;
 /**
  * Handles the internal representation of the gameBoard.
  * 
+ * 0 - Blank spot.
+ * 1 - X
+ * 2 - O
+ * 
  * @author Simon Ulander
  *
  */
