@@ -7,6 +7,9 @@ public class Main {
 		System.out.println("Hello World!");
 		System.out.println("Viktor here!");
 		System.out.println("Hello World!");
+
+		int[] test = GameInput.takeInput("Player1");
+		System.out.println(test[0] + " " + test[1]);
 	}
 
 }
