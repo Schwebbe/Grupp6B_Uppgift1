@@ -21,7 +21,7 @@ public class CheckWin {
      * 
      */
 
-    public static boolean checkWinX(GameBoard gb) {
+    public static boolean WinX(GameBoard gb) {
 
         // Check condition for diagonal, up/down.
 
@@ -72,7 +72,7 @@ public class CheckWin {
      * 
      */
 
-    public static boolean checkWinO(GameBoard gb) {
+    public static boolean WinO(GameBoard gb) {
 
         // Check condition for diagonal, up/down.
 
