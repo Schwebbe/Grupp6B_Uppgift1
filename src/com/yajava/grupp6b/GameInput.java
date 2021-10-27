@@ -28,7 +28,10 @@ public class GameInput {
                 }
             }
         }
-
         return move;
+
+    }
+    public static void close(){
+        scanner.close();
     }
 }
