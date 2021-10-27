@@ -112,4 +112,37 @@ public class CheckWin {
 
     }
 
+    /**
+     * 
+     * @param GameBoard
+     * @return int
+     * 
+     *         Method that keeps track on number of free space on the gameboard.
+     *         This method is to check if it's a possible draw. The method returns
+     *         number of free places.
+     * 
+     */
+
+    public static int draw(GameBoard gb) {
+
+        int count = 0;
+
+        for (int i = 0; i < 3; i++) {
+
+            for (int j = 0; j < 3; j++) {
+
+                if (gb.getPoint(i, j) == 0) {
+
+                    count++;
+
+                }
+
+            }
+
+        }
+
+        return count;
+
+    }
+
 }
