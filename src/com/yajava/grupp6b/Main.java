@@ -30,7 +30,7 @@ public class Main {
 				break;
 			}
 			
-			// O makes a move and checks if it resulted in a win:
+			// X makes a move and checks if it resulted in a win:
 			PrintBoard.printBoard(gameboard);
 			currentmove = GameInput.takeInput("O");
 			gameboard.setPoint(currentmove[0], currentmove[1], 2);
