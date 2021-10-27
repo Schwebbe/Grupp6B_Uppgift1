@@ -1,5 +1,6 @@
 package com.yajava.grupp6b;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class GameInput {
@@ -11,7 +12,7 @@ public class GameInput {
         int[] move = {1,1};
         while (!isValid){
             System.out.println(player + " Make your move ");
-            String input = scanner.nextLine();
+            String input = scanner.nextLine().toUpperCase();
 
             for (int i = 0; i < 3; ++i){
                 for( int j = 0; j < 3; ++j){
