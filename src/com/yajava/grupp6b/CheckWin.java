@@ -21,18 +21,18 @@ public class CheckWin {
      * 
      */
 
-    public static boolean WinX(GameBoard gb) {
+    public static boolean Win(GameBoard gb, int player) {
 
         // Check condition for diagonal, up/down.
 
-        if (gb.getPoint(0, 0) == 1 && gb.getPoint(1, 1) == 1 && gb.getPoint(2, 2) == 1) {
+        if (gb.getPoint(0, 0) == player && gb.getPoint(1, 1) == player && gb.getPoint(2, 2) == player) {
 
             return true;
         }
 
         // Check condition for diagonal down/up.
 
-        if (gb.getPoint(0, 2) == 1 && gb.getPoint(1, 1) == 1 && gb.getPoint(2, 0) == 1) {
+        if (gb.getPoint(0, 2) == player && gb.getPoint(1, 1) == player && gb.getPoint(2, 0) == player) {
 
             return true;
         }
@@ -41,7 +41,7 @@ public class CheckWin {
 
         for (int i = 0; i < 3; i++) {
 
-            if (gb.getPoint(i, 0) == 1 && gb.getPoint(i, 1) == 1 && gb.getPoint(i, 2) == 1) {
+            if (gb.getPoint(i, 0) == player && gb.getPoint(i, 1) == player && gb.getPoint(i, 2) == player) {
 
                 return true;
             }
@@ -51,7 +51,7 @@ public class CheckWin {
 
         for (int i = 0; i < 3; i++) {
 
-            if (gb.getPoint(0, i) == 1 && gb.getPoint(1, i) == 1 && gb.getPoint(2, i) == 1) {
+            if (gb.getPoint(0, i) == player && gb.getPoint(1, i) == player && gb.getPoint(2, i) == player) {
 
                 return true;
             }
@@ -72,45 +72,49 @@ public class CheckWin {
      * 
      */
 
-    public static boolean WinO(GameBoard gb) {
-
-        // Check condition for diagonal, up/down.
-
-        if (gb.getPoint(0, 0) == 2 && gb.getPoint(1, 1) == 2 && gb.getPoint(2, 2) == 2) {
-
-            return true;
-        }
-
-        // Check condition for diagonal down/up.
-
-        if (gb.getPoint(0, 2) == 2 && gb.getPoint(1, 1) == 2 && gb.getPoint(2, 0) == 2) {
-
-            return true;
-        }
-
-        // Loop to check horizontal win
-
-        for (int i = 0; i < 3; i++) {
-
-            if (gb.getPoint(i, 0) == 2 && gb.getPoint(i, 1) == 2 && gb.getPoint(i, 2) == 2) {
-
-                return true;
-            }
-        }
-
-        // Loop to check vertical win
-
-        for (int i = 0; i < 3; i++) {
-
-            if (gb.getPoint(0, i) == 2 && gb.getPoint(1, i) == 2 && gb.getPoint(2, i) == 2) {
-
-                return true;
-            }
-        }
-
-        return false;
-
-    }
+    // public static boolean WinO(GameBoard gb) {
+    //
+    // // Check condition for diagonal, up/down.
+    //
+    // if (gb.getPoint(0, 0) == 2 && gb.getPoint(1, 1) == 2 && gb.getPoint(2, 2) ==
+    // 2) {
+    //
+    // return true;
+    // }
+    //
+    // // Check condition for diagonal down/up.
+    //
+    // if (gb.getPoint(0, 2) == 2 && gb.getPoint(1, 1) == 2 && gb.getPoint(2, 0) ==
+    // 2) {
+    //
+    // return true;
+    // }
+    //
+    // // Loop to check horizontal win
+    //
+    // for (int i = 0; i < 3; i++) {
+    //
+    // if (gb.getPoint(i, 0) == 2 && gb.getPoint(i, 1) == 2 && gb.getPoint(i, 2) ==
+    // 2) {
+    //
+    // return true;
+    // }
+    // }
+    //
+    // // Loop to check vertical win
+    //
+    // for (int i = 0; i < 3; i++) {
+    //
+    // if (gb.getPoint(0, i) == 2 && gb.getPoint(1, i) == 2 && gb.getPoint(2, i) ==
+    // 2) {
+    //
+    // return true;
+    // }
+    // }
+    //
+    // return false;
+    //
+    // }
 
     /**
      * 
