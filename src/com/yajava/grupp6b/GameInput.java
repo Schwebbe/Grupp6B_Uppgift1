@@ -14,22 +14,22 @@ public class GameInput {
 		
 		System.out.println("Who should start X, O, or random?");
 		
-		String input = scanner.nextLine();
+		String input = scanner.nextLine().toLowerCase();
 		
-		while (!(input.toLowerCase().equals("x") || input.toLowerCase().equals("o") || input.toLowerCase().equals("random"))) {
+		while (!(input.equals("x") || input.equals("o") || input.equals("random"))) {
 			System.out.println("Valid input is X, O or random: ");
 			input = scanner.nextLine();
 		}
 		
-		if (input.toLowerCase().equals("x")) {
+		if (input.equals("x")) {
 			return X;
 		}
 		
-		if (input.toLowerCase().equals("o")) {
+		if (input.equals("o")) {
 			return O;
 		}
 		
-		if (input.toLowerCase().equals("random")) {
+		if (input.equals("random")) {
 			if (Math.random() >= 0.5) {
 				return O;
 			}
