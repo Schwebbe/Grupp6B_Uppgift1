@@ -38,7 +38,7 @@ public class Main {
 		
 		// Make sure the user isn't attempting to write over moves of the other player or waste a move:
 		while(!gameboard.setPoint(currentmove[0], currentmove[1], retVal(player))) {
-			System.out.println("Spot already taken! Choose another one!");
+			System.out.println("Invalid move! Choose another one!");
 			currentmove = GameInput.takeInput(player);
 		}
 		
