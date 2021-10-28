@@ -14,6 +14,37 @@ public class GameInput {
     //arranged to match the gameBoard layout for easy conversion
     private static final String[][] validInput = {{"A1","A2","A3"},{"B1","B2","B3"},{"C1","C2","C3"}};
 
+	public static String[] whoStart() {
+		String[] X = {"X","O"};
+		String[] O = {"O","X"};
+
+
+		System.out.println("Who should start X, O, or random?");
+
+		String input = scanner.nextLine().toLowerCase();
+
+		while (!(input.equals("x") || input.equals("o") || input.equals("random"))) {
+			System.out.println("Valid input is X, O or random: ");
+			input = scanner.nextLine();
+		}
+
+		if (input.equals("x")) {
+			return X;
+		}
+
+		if (input.equals("o")) {
+			return O;
+		}
+
+		if (input.equals("random")) {
+			if (Math.random() >= 0.5) {
+				return O;
+			}
+		}
+
+		return X;
+	}
+
     /**
      * Prompts the player to enter a move and validates the input against the validInput array.
      * @param player current player
