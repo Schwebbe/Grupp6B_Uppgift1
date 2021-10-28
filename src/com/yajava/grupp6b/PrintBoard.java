@@ -17,7 +17,7 @@ public class PrintBoard {
 				{' ', ' ',  ' '},
 				{' ',  ' ',  ' '},
 		};
-		System.out.println("\t" + 1 + "\t\t" + 2 + "\t\t" + 3);
+		System.out.println("      " + 1 + "      " + 2 + "      " + 3);
 		
 		
 		// This nestled for-loop will print out a 3x3 playing field.
@@ -43,8 +43,8 @@ public class PrintBoard {
 	
 	// Method the rows for the playing field
 	public static void printGrids(char [][] gameGrid) {
-		System.out.print(" ");
-		for (int i = 0; i < 48; i++) {
+		System.out.print("  ");
+		for (int i = 0; i < 23; i++) {
 			System.out.print('-');
 		}
 	
@@ -56,19 +56,20 @@ public class PrintBoard {
 		for(char[] row : gameGrid) {
 			int count = 0;
 			// Prints letters A-C
-			System.out.print(rowLetter);
+			System.out.print(rowLetter + " ");
 
 			// forEach loop that iterates each row 1-3
 			for( char c : row) {
 				
-				System.out.print("|"+"\t" +c + "\t");
-				if(count++ == row.length - 1) {
+				System.out.print("|" + c + "\t");
+				if(count++ == row.length - 1) { 
 
 					// New row
 					System.out.print('|' + "\n ");
 					
 					// for-loop printing out new line
-					for (int i = 0; i < 48; i++) {
+					System.out.print(" ");
+					for (int i = 0; i < 23; i++) {
 						System.out.print("-");
 					}
 				}
