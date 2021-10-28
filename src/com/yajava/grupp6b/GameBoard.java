@@ -37,21 +37,21 @@ public class GameBoard {
 		return gameBoard[x][y];
 	}
 	
-	int setPoint(int x, int y, int val){
+	boolean setPoint(int x, int y, int val){
 		
 		// Returns -1 when given invalid input
 		if (x > 2 || x < 0 || y > 2 || y < 0) {
-			return -1;
+			return false;
 		}
 		
 		// User cannot write to a space that is already occupied:
 		if (gameBoard[x][y] != 0) {
-			return -1;
+			return false;
 		}
 		
 		gameBoard[x][y] = val;
 		
-		return 0;
+		return true;
 	}
 	
 	
