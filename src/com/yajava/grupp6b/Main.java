@@ -21,6 +21,7 @@ public class Main {
 		// Initialize the board:
 		GameBoard gameboard = new GameBoard();
 		
+		PrintBoard.gameRules();
 		
 		boolean running = true;
 		int[] currentmove;
