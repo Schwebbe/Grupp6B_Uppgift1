@@ -28,19 +28,13 @@ public class Main {
 			currentmove = GameInput.takeInput(player);
 		}
 		
-		if (player.toUpperCase().equals("X")) {
-			if (CheckWin.WinX(gameboard)) {
-				PrintBoard.printBoard(gameboard);
-				System.out.println("X wins!");
-				return false;
-			}
-		}else if (player.toUpperCase().equals("O")) {
-			if (CheckWin.WinO(gameboard)) {
-				PrintBoard.printBoard(gameboard);
-				System.out.println("O wins!");
-				return false;
-			}
+		PrintBoard.printBoard(gameboard);
+		
+		if (CheckWin.Win(gameboard, retVal(player))) {
+			System.out.println(player + " wins!");
+			return false;
 		}
+		
 
 		return true;
 	}
