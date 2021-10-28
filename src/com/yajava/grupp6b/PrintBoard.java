@@ -84,7 +84,7 @@ public class PrintBoard {
 	}
 
 	// Method that prints out the game rules
-	private static void gameRules() {
+	public static void gameRules() {
 		System.out.println("Spelregler: \nVarje spelare fyller i en kolumn (1, 2, 3) och rad (A B C) koordinat för att spela sin tur."
 				+ "\nExempel: B2 fyller i position B2."
 				+ "\nLycka till!\n");
