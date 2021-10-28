@@ -24,6 +24,7 @@ public class Main {
 		
 		currentmove = GameInput.takeInput(player);
 		while(!gameboard.setPoint(currentmove[0], currentmove[1], retVal(player))) {
+			System.out.println("Spot already taken! Choose another one!");
 			currentmove = GameInput.takeInput(player);
 		}
 		
