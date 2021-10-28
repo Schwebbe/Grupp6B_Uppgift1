@@ -6,7 +6,38 @@ import java.util.Scanner;
 public class GameInput {
     private static final Scanner scanner = new Scanner(System.in);
     private static final String[][] validInput = {{"A1","A2","A3"},{"B1","B2","B3"},{"C1","C2","C3"}};
-
+    
+	public static String[] whoStart() {
+		String[] X = {"X","O"};
+		String[] O = {"O","X"};
+		
+		
+		System.out.println("Who should start X, O, or random?");
+		
+		String input = scanner.nextLine();
+		
+		while (!(input.toLowerCase().equals("x") || input.toLowerCase().equals("o") || input.toLowerCase().equals("random"))) {
+			System.out.println("Valid input is X, O or random: ");
+			input = scanner.nextLine();
+		}
+		
+		if (input.toLowerCase().equals("x")) {
+			return X;
+		}
+		
+		if (input.toLowerCase().equals("o")) {
+			return O;
+		}
+		
+		if (input.toLowerCase().equals("random")) {
+			if (Math.random() >= 0.5) {
+				return O;
+			}
+		}
+		
+		return X;
+	}
+    
     public static int[] takeInput(String player) {
         boolean isValid = false;
         int[] move = {1,1};

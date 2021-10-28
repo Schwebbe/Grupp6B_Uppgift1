@@ -4,40 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	
-	public static String[] whoStart() {
-		String[] X = {"X","O"};
-		String[] O = {"O","X"};
-		
-		
-		System.out.println("Who should start X, O, or random?");
-		
-		Scanner scan = new Scanner(System.in);
-		
-		String input = scan.nextLine();
-		
-		while (!(input.toLowerCase().equals("x") || input.toLowerCase().equals("o") || input.toLowerCase().equals("random"))) {
-			System.out.println("Valid input is X, O or random: ");
-			input = scan.nextLine();
-		}
-		
-		scan.close();
-		
-		if (input.toLowerCase().equals("x")) {
-			return X;
-		}
-		
-		if (input.toLowerCase().equals("o")) {
-			return O;
-		}
-		
-		if (input.toLowerCase().equals("random")) {
-			if (Math.random() >= 0.5) {
-				return O;
-			}
-		}
-		
-		return X;
-	}
+
 	
 	public static int retVal(String s) {
 		if (s.equals("X")) {
@@ -54,10 +21,11 @@ public class Main {
 		// Initialize the board:
 		GameBoard gameboard = new GameBoard();
 		
+		
 		boolean running = true;
 		int[] currentmove;
 		
-		String[] starter = whoStart();
+		String[] starter = GameInput.whoStart();
 		while (running) {
 			//Show the board:
 			PrintBoard.printBoard(gameboard);
