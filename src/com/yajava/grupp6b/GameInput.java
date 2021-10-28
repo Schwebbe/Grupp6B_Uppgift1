@@ -60,7 +60,7 @@ public class GameInput {
             for (int i = 0; i < 3; ++i){
                 for( int j = 0; j < 3; ++j){
                     String current = validInput[i][j];
-                    if( input.equals(current)){
+                    if( input.equals(current)|| input.equals(reverseString(current))){
                         move[0] = i;
                         move[1] = j;
                         isValid = true;
@@ -77,5 +77,10 @@ public class GameInput {
     }
     public static void close(){
         scanner.close();
+    }
+    private static String reverseString(String toReverse){
+        StringBuilder sb = new StringBuilder(toReverse);
+        sb.reverse();
+        return sb.toString();
     }
 }
