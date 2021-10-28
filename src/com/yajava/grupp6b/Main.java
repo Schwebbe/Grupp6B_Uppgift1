@@ -1,7 +1,5 @@
 package com.yajava.grupp6b;
 
-import java.util.Scanner;
-
 public class Main {
 
 	public static int retVal(String s) {
