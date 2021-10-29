@@ -13,7 +13,13 @@ public class GameInput {
 
     //arranged to match the gameBoard layout for easy conversion
     private static final String[][] validInput = {{"A1","A2","A3"},{"B1","B2","B3"},{"C1","C2","C3"}};
-
+    
+    /**
+     * Taken in from the Main class because having two separate scanners caused problems.
+     * This method handles the order that the players play.
+     * 
+     * @return
+     */
 	public static String[] whoStart() {
 		String[] X = {"X","O"};
 		String[] O = {"O","X"};

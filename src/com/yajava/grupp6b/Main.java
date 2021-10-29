@@ -1,5 +1,11 @@
 package com.yajava.grupp6b;
 
+/**
+ * The Main class ties everything together.
+ * 
+ * @author Simon Ulander
+ *
+ */
 public class Main {
 	
 	/**
